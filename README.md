@@ -2,7 +2,7 @@
 
 These are my configuration files that I usually use during my daily work, extensions and code rules that I enjoy. Since I work with different types of technologies, these files might change as well, so check them periodically.
 
-Also, feel free to make offer me a Pull Request on how I could make them better for you as well.
+Also, feel free to offer a Pull Request on how I could make them better for you as well.
 
 Enjoy! 😘
 
