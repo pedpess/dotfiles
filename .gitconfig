@@ -1,0 +1,26 @@
+[user]
+	name = Pedro Pessoa
+	email = 
+[color]
+	ui = auto
+	status = auto
+	branch = auto
+	diff = auto
+[core]
+	whitespace = trailing-space,space-before-tab
+	excludesfile = ~/.gitignore
+	editor = code
+[diff]
+	renames = copies
+	mnemonicprefix = true
+[branch]
+	autosetupmerge = true
+[rerere]
+	enabled = true
+[merge]
+	stat = true
+	tool = opendiff
+[alias]
+	cu = !git branch --merged | egrep -v \"(^\\*|master|develop)\" | xargs git branch -d
+[credential]
+	helper = osxkeychain
