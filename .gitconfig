@@ -1,6 +1,6 @@
 [user]
 	name = Pedro Pessoa
-	email = 
+	email = 14947502+pedpess@users.noreply.github.com
 [color]
 	ui = auto
 	status = auto
@@ -9,7 +9,7 @@
 [core]
 	whitespace = trailing-space,space-before-tab
 	excludesfile = ~/.gitignore
-	editor = code
+	editor = vim
 [diff]
 	renames = copies
 	mnemonicprefix = true
@@ -17,10 +17,19 @@
 	autosetupmerge = true
 [rerere]
 	enabled = true
+[apply]
+	whitespace = fix
 [merge]
 	stat = true
 	tool = opendiff
-[alias]
-	cu = !git branch --merged | egrep -v \"(^\\*|master|develop)\" | xargs git branch -d
 [credential]
 	helper = osxkeychain
+[help]
+	autocorrect = 1
+[commit]
+	# https://help.github.com/articles/signing-commits-using-gpg/
+	gpgsign = true
+[push]
+	default = simple
+	# Make `git push` push relevant annotated tags when pushing branches out.
+	followTags = true
