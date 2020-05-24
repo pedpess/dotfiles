@@ -6,71 +6,34 @@
     "workbench.editor.tabCloseButton": "off",
     "workbench.startupEditor": "newUntitledFile",
     "extensions.ignoreRecommendations": false,
-
+    "workbench.editor.enablePreview": false,
+        
     // Fonts
-    "editor.fontSize": 18,
+    "editor.fontSize": 16,
     "editor.lineHeight": 24,
     "editor.fontFamily": "Fira Code",
     "editor.fontLigatures": true,
-
-    // Editor Rules
-    "editor.rulers": [80, 120],
-    "editor.formatOnPaste": true,
-    "prettier.eslintIntegration": true,
-    "editor.trimAutoWhitespace": true,
-    "editor.tabSize": 2,
-    "emmet.syntaxProfiles": {
-        "javascript": "jsx"
-    },
-    "emmet.includeLanguages": {
-        "javascript": "javascriptreact",
-        "nunjucks": "html"
-    },
-
+        
     // Editor UI
     "editor.cursorBlinking": "expand",
     "editor.renderLineHighlight": "gutter",
+    "editor.multiCursorModifier": "ctrlCmd",
     "window.zoomLevel": 0,
     "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
-    "editor.mouseWheelZoom": false,
-    
+        
     // Terminal
     "terminal.integrated.fontSize": 14,
-
-    // Analytics
-    "telemetry.enableTelemetry": false,
-    "codemetrics.basics.CodeLensEnabled": true,
-    "codemetrics.nodeconfiguration.ReturnStatement": 0,
-    "codemetrics.nodeconfiguration.CaseClause": 0,
-    "codemetrics.nodeconfiguration.DefaultClause": 0,
-    "cSpell.enabledLanguageIds": [
-        "css",
-        "dart",
-        "git-commit",
-        "html",
+    "editor.suggestSelection": "first",
+        
+    // Typescript
+    "typescript.tsdk": "node_modules/typescript/lib",
+        
+    // Linter
+    "eslint.run": "onSave",
+    "eslint.validate": [
         "javascript",
         "javascriptreact",
-        "json",
-        "plaintext",
-        "text",
         "typescript",
-        "typescriptreact",
-        "yaml",
-        "yml"
+        "typescriptreact"
     ],
-
-    // TODO
-    "todo-tree.defaultHighlight": {
-        "foreground": "green",
-        "type": "none"
-    },
-    "todo-tree.customHighlight": {
-        "TODO": {},
-        "FIXME": {}
-    },
-
-    // Git
-    "gitlens.codeLens.recentChange.enabled": false,
-    "gitlens.codeLens.authors.enabled": false,
-    "gitlens.codeLens.enabled": false,
 }
