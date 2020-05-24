@@ -48,17 +48,21 @@ ZSH_THEME="dracula"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git, git-extras, gitfast, gradle, history, gitignore, git-flow)
+plugins=(zsh-syntax-highlighting zsh-completions history git)
 
 source $ZSH/oh-my-zsh.sh
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Plugins Manual Install
+## Git Completion
+zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
+fpath=(~/.zsh $fpath)
+## Others
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH
-export PATH=~/Dev/Flutter/flutter/bin:$PATH
-export PATH="$HOME/.fastlane/bin:$PATH"
 export ANDROID_HOME=/Users/$USER/Library/Android/sdk
 export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 
@@ -92,7 +96,7 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 #Commands
 alias zshconfig="code ~/.zshrc"
 alias cc="clear"
-alias android="/Users/ppes/Library/Android/sdk/tools/emulator  -avd Pixel_2_API_28 -x86"
+alias android="/Users/ppes/Library/Android/sdk/tools/emulator  -avd Pixel_3a_API_29 -x86"
 alias lh='ls -a | egrep "^\."'
 alias rmf="rm -rfv"
 
@@ -113,6 +117,4 @@ alias gm="git merge"
 alias gcu="git branch --merged | egrep -v \"(^\\*|master|develop)\" | xargs git branch -d"
 alias gig="git ls-files --others --ignored --exclude-standard --directory"
 alias gg="git grep -i"
-
-# added by travis gem
-[ -f /Users/ppes/.travis/travis.sh ] && source /Users/ppes/.travis/travis.sh
+alias gup="git pull --rebase --autostash"
